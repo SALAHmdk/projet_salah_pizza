@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Platform</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Notre Pizza Shop</h1>
+        <nav>
+            <button class="nav-btn active" data-view="predefined">Nos Pizzas</button>
+            <button class="nav-btn" data-view="custom">Créer sa Pizza</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="predefined-pizzas" class="active">
+            <h2>Nos Pizzas Signatures</h2>
+            <div class="pizza-grid"></div>
+        </section>
+
+        <section id="pizza-builder" class="hidden">
+            <h2>Composez votre pizza</h2>
+            <div class="pizza-container">
+                <div class="pizza-base">
+                    <img src="/src/assets/pizza-base.png" alt="Base pizza">
+                </div>
+                <div id="toppings"></div>
+            </div>
+
+            <div class="ingredients-selector">
+                <h3>Ingrédients disponibles</h3>
+                <div id="ingredients-list"></div>
+            </div>
+
+            <div class="pizza-summary">
+                <h3>Votre Pizza</h3>
+                <ul id="selected-ingredients"></ul>
+                <p>Prix total: <span id="total-price">0.00</span>€</p>
+                <button id="order-btn">Commander</button>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
